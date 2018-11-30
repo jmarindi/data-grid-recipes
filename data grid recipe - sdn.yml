@@ -19,11 +19,13 @@ categories:
           include:  
               - (tags:"administrative divisions" AND tags:"common operational dataset - cod" AND subnational:1)
               - ((tags:"administrative divisions" OR tags:"administrative boundaries") AND tags:"cod" AND subnational:1)
+              - (name:sudan-administrative-boundaries-levels-0-2)
           exclude:
         metadata_overrides:
-          - dataset_name: 
-            display_state: 
-            comments: 
+          - dataset_name: sudan-administrative-boundaries-levels-0-2
+            display_state: incomplete
+            comments: Dataset has not been endorsed as a COD.
+
 #POPULATED PLACES
       - name: populated_places
         title: Populated Places
@@ -120,7 +122,12 @@ categories:
           include:
             - (tags:"health facilities" AND subnational:1)
             - (tags:hospitals AND subnational:1)
+            - (name:sudan-healthsites)
           exclude:
+        metadata_overrides:
+          - dataset_name: sudan-healthsites
+            display_state: incomplete
+            comments: Healthsites data are derived from OpenStreetMap. Dataset completeness is difficult to determine.
   - name: education
     title: Education
     description: Data describing education facilities and key education indicators.
@@ -205,6 +212,7 @@ categories:
             - (tags:"refugee" AND subnational:1)
             - (tags:"persons of concern" AND subnational:1)
             - (tags:"poc" AND subnational:1)
+            - (name:refugees-originating-sdn)
           exclude:
 #RETURNEES
       - name: returnees
