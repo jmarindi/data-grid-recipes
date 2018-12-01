@@ -213,6 +213,7 @@ categories:
             - (tags:"internally displaced persons" AND subnational:1)
           exclude:
             - (name:humanitarian-data-for-eastern-africa-region) #not subnational
+            - (name:sudan-returnee-data-iom-dtm) #excluding from idp, but is allowed in returnee subcat
 #REFUGEES POCs
       - name: refugees_poc
         title: Refugees and Persons of Concern
