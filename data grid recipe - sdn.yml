@@ -84,6 +84,7 @@ categories:
             - (tags:"humanitarian needs overview")
             - (tags:"humanitarian needs overview - hno")
             - (organization:"worldpop" AND title:" - Population" AND res_format:"zipped geotiff")
+            - (organization:071e8db3-51fe-4da3-9723-ad6480f18d17) #African Development Bank Group datasets are not subnational
         metadata_overrides:
         - dataset_name: 
           display_state: 
@@ -212,7 +213,6 @@ categories:
             - (tags:"refugee" AND subnational:1)
             - (tags:"persons of concern" AND subnational:1)
             - (tags:"poc" AND subnational:1)
-            - (name:refugees-originating-sdn)
           exclude:
 #RETURNEES
       - name: returnees
