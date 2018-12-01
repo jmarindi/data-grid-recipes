@@ -99,6 +99,7 @@ categories:
             - (tags:"population" AND tags:"sadd" AND subnational:1)
             - (tags:"population" AND tags:"sex and age disaggregated" AND subnational:1)
           exclude:
+            - (organization:afdb) #African Development Bank Group datasets are not subnational
         metadata_overrides:
           - dataset_name: 
             display_state: 
@@ -141,7 +142,12 @@ categories:
           include:
             - (tags:"education facilities" AND subnational:1)
             - (tags:schools AND subnational:1)
+            - (name:food-for-education-ffe-supported-schools-sudan)
           exclude:
+        metadata_overrides:
+          - dataset_name: food-for-education-ffe-supported-schools-sudan
+            display_state: incomplete
+            comments: Dataset covers a limited area and only includes schools in the program.
 #AFFECTED SCHOOLS
       - name: affected_schools
         title: Affected Schools
@@ -166,6 +172,9 @@ categories:
           exclude:
             - (name:coping-strategy-index-csi) # This is a default exclude for wfp coping strategies; if it can be updated regularly, we may want to add a new subcategory for this one
             - (name:food-consumption-score-fcs) # This is a default exclude for wfp food consumption score; if can be updated regularly, we may want to add a new subcategory for this one
+            - (name:ethiopia-food-security-0) # many years out of date
+            - (name:ethiopia-food-security) # many years out of date
+            - (name:https:humanitarian-data-for-eastern-africa-region) #not subnational
 #GAM
       - name: gam
         title: Global Acute Malnutrition Rate
@@ -203,6 +212,7 @@ categories:
             - (tags:"internally displaced people" AND subnational:1)
             - (tags:"internally displaced persons" AND subnational:1)
           exclude:
+            - (name:humanitarian-data-for-eastern-africa-region) #not subnational
 #REFUGEES POCs
       - name: refugees_poc
         title: Refugees and Persons of Concern
@@ -214,6 +224,7 @@ categories:
             - (tags:"persons of concern" AND subnational:1)
             - (tags:"poc" AND subnational:1)
           exclude:
+            - (name:humanitarian-data-for-eastern-africa-region) #not subnational
 #RETURNEES
       - name: returnees
         title: Returnees
@@ -223,6 +234,7 @@ categories:
             - (tags:"returnees" AND subnational:1)
             - (tags:"returned refugees" AND subnational:1)
           exclude:
+            - (name:refugee-camps-in-west-nile-and-east-sudan)
         metadata_overrides:
           - dataset_name: 
             display_state: 
@@ -236,11 +248,12 @@ categories:
             - (tags:"affected persons location" AND subnational:1)
             - (tags:"affected persons locations" AND subnational:1)
             - (tags:"camps" AND subnational:1)
+            - (name:refugee-camps-in-west-nile-and-east-sudan)
           exclulde:
         metadata_overrides:
-          - dataset_name: 
-            display_state: 
-            comments: 
+          - dataset_name: refugee-camps-in-west-nile-and-east-sudan
+            display_state: incomplete 
+            comments: Dataset covers a limited area.
   - name: humanitarian_coordination
     title: Humanitarian Coordination
     description: Core data relating to the coordination of humanitarian activities in a country or crisis.
@@ -254,9 +267,9 @@ categories:
             - (tags:3w AND subnational:1)
           exclude:
         metadata_overrides:
-          - dataset_name: 
-            display_state: 
-            comments: 
+          - dataset_name: sudan-who-is-doing-what-where-3w
+            display_state: incomplete
+            comments: Dataset is very outdated.
 #AFFECTED AREAS
       - name: affected_areas
         title: Affected Areas
