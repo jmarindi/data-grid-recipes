@@ -174,7 +174,7 @@ categories:
             - (name:food-consumption-score-fcs) # This is a default exclude for wfp food consumption score; if can be updated regularly, we may want to add a new subcategory for this one
             - (name:ethiopia-food-security-0) # many years out of date
             - (name:ethiopia-food-security) # many years out of date
-            - (name:https:humanitarian-data-for-eastern-africa-region) #not subnational
+            - (name:humanitarian-data-for-eastern-africa-region) #not subnational
 #GAM
       - name: gam
         title: Global Acute Malnutrition Rate
