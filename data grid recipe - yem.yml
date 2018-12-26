@@ -163,7 +163,7 @@ categories:
 
 
 
- - name: food_security_and_nutrition
+  - name: food_security_and_nutrition
     title: Food Security and Nutrition
     description: Data about a population's access to food and key nutrition indicators.
     data_series:
