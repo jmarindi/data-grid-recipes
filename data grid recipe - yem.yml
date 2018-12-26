@@ -149,6 +149,17 @@ categories:
             - (tags:"obstacles" AND subnational:1)
             - (tags:"transportation status" AND subnational:1)
           exclude:
+#CONFLICT EVENTS
+      - name: conflict_events
+        title: Conflict Events
+        description: Vector data or tabular data with coordinates describing the location, date, and type of conflict event.
+        rules:
+          include:
+            - (tags:"conflicts" AND subnational:1)
+            - (tags:"conflict" AND subnational:1)
+            - (tags:"security incidents" AND subnational:1)
+          exclude:
+
 
 
 
