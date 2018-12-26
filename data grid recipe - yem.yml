@@ -7,6 +7,153 @@ name: yem
 title:  Yemen Core Data
 description: This data grid is configured based on a glboal default list of essential datasets for humanitarian data readiness. 
 categories: 
+  - name: humanitarian_coordination
+    title: Humanitarian Coordination
+    description: Core data relating to the coordination of humanitarian activities in a country or crisis.
+    data_series:
+#WHO WHAT WHERE
+      - name: 3w
+        title: 3w - Who is doing what where
+        description: List of organizations working on humanitarian issues, by humanitarian cluster/sector and disaggregated by administrative division.
+        rules:
+          include:
+            - (tags:3w AND subnational:1)
+            - (title:"InterAction member activities in")
+          exclude:
+        metadata_overrides:
+          - dataset_name: ngoaidmap-yem #interaction
+            display_state: incomplete
+            comments: Dataset contains data about some organizations but not all working in the country. Dataset is disaggregated geographically, but inconsistently. 
+
+
+
+
+  - name: humanitarian_profile
+    title: Humanitarian Profile
+    description: Data about the number of people affected by a crisis.
+    data_series:
+#IDPs
+      - name: idp
+        title: Internally-Displaced Persons
+        description: Tabular data of the number of displaced people by location.  Locations can be administrative divisions or other locations (such as camps) if an additional dataset defining those locations is also available.
+        rules:
+          include:
+            - (tags:"internally displaced persons - idp" AND subnational:1)
+            - (tags:idp AND subnational:1)
+            - (tags:idps AND subnational:1)
+            - (tags:"internally displaced" AND subnational:1)
+            - (tags:"internally displaced people" AND subnational:1)
+            - (tags:"internally displaced persons" AND subnational:1)
+          exclude:
+            - (id:51e83597-474d-40d7-bdd6-15ea4c9986b9) #old version of the DTM data from 2017
+            - (id:96fea290-f0be-4241-8f10-858ff159e85f) #an aggregated version of another DTM dataset that is already included.  This one would be duplicative.
+        metadata_overrides:
+          - dataset_name: yemen-assessment-data-dtm
+            display_state: incomplete
+            comments: Dataset is disaggregated using administrative divisions, but the p-codes do not conform to the standard.  Dataset is disaggregated using specific locations, but no corresponding dataset defining those locations is available.
+#REFUGEES POCs
+      - name: refugees_poc
+        title: Refugees and Persons of Concern
+        description: Tabular data of the number of refugees and persons of concern either in the country or originating from the country disaggregated by their current location. Locations can be administrative divisions or other locations (such as camps) if an additional dataset defining those locations is also available or if the locations' coordinates are defined in the tabular data.
+        rules:
+          include:
+            - (tags:"refugees" AND subnational:1)
+            - (tags:"refugee" AND subnational:1)
+            - (tags:"persons of concern" AND subnational:1)
+            - (tags:"poc" AND subnational:1)
+          exclude:
+#RETURNEES
+      - name: returnees
+        title: Returnees
+        description: Tabular data of the number of displaced people who have returned. 
+        rules:
+          include:
+            - (tags:"returnees" AND subnational:1)
+            - (tags:"returned refugees" AND subnational:1)
+          exclude:
+        metadata_overrides:
+          - dataset_name: yemen-assessment-data-dtm
+            display_state: incomplete
+            comments: Dataset is disaggregated using administrative divisions, but the p-codes do not conform to the standard.  Dataset is disaggregated using specific locations, but no corresponding dataset defining those locations is available.
+#HUM PROFILE LOCATIONS
+      - name: humanitarian_profile_locations
+        title: Humanitarian Profile Locations
+        description: Vector or tabular data with coordinates representing the locations at which displaced people are gathered.
+        rules: 
+          include:
+            - (tags:"affected persons location" AND subnational:1)
+            - (tags:"affected persons locations" AND subnational:1)
+            - (tags:"camps" AND subnational:1)
+          exclulde:
+
+
+
+
+
+  - name: crisis-specific
+    title: Situational Awareness
+    description: Crisis-specific data.  Subcategories vary depending on the type of crisis.
+    data_series:
+#CASUALTIES
+      - name: casualties
+        title: Casualties
+        description: Number of deaths and/or persons injured, disaggregated by location.  Values can be cumulative totals or a time series of new deaths and/or injured persons.
+        rules:
+          include:
+            - (tags:casualties AND subnational:1)
+            - (tags:fatalities AND subnational:1)
+            - (tags:deaths AND subnational:1)
+          exclude:
+            - (name:yemen-cholera-outbreak-daily-epidemiology-update) #no longer updated and new cases seems to have slowed, assuming this crisis considered over
+      - name: missing_persons
+        title: Missing Persons
+        description: Current number of people missing, disaggregated by location.
+        rules:
+          include:
+            - (tags:missing persons AND subnational:1)
+          exclude:
+#AFFECTED AREAS
+      - name: affected_areas
+        title: Affected Areas
+        description: Vector data or tabular data by administrative division which describe the type and/or severity of impacts geographically.
+        rules:
+          include:
+            - (tags:"affected area" AND subnational:1)
+            - (tags:"affected areas" AND subnational:1)
+          exclude:
+            - (tags:"damage assessment")
+#DAMAGED BUILDINGS
+      - name: damaged_buildings
+        title: Damaged and Destroyed Buildings
+        description: Vector data with locations of damanged/destroyed buildings and an indication of damage level or tabular data indicating percentage or total number of buildings in each damage category by administrative divisions.
+        rules:
+          include:
+            - (tags:"damaged buildings" AND subnational:1)
+            - (tags:"damage assessment" AND subnational:1)
+          exclude:
+#HUMANITARIAN ACCESS
+      - name: humanitarian_access
+        title: Humanitarian Access
+        description: Tabular or vector data describing the location of natural hazards, permissions, active fighting, or other access constraints that impact the delivery of humanitarian interventions.
+        rules:
+          include:
+            - (tags:"humanitarian access" AND subnational:1)
+            - (tags:"obstacles" AND subnational:1)
+          exclude:
+#TRANSPORTATION STATUS
+      - name: transportation_status
+        title: Transportation Status
+        description: Vector or tabular data representing local transportation routes with an indication of status or current practicability.
+        rules:
+          include:
+            - (tags:"obstacles" AND subnational:1)
+            - (tags:"transportation status" AND subnational:1)
+          exclude:
+
+
+
+
+
   - name: administration
     title: Administration
     description: Data relating to the administration of a location, most importantly, the administrative divisions (regions, districts, counties, etc.). 
@@ -181,132 +328,4 @@ categories:
             - (tags:"severe acute malnutrition" AND subnational:1)
             - (tags:sam AND subnational:1)
           exclude:
-  - name: humanitarian_profile
-    title: Humanitarian Profile
-    description: Data about the number of people affected by a crisis.
-    data_series:
-#IDPs
-      - name: idp
-        title: Internally-Displaced Persons
-        description: Tabular data of the number of displaced people by location.  Locations can be administrative divisions or other locations (such as camps) if an additional dataset defining those locations is also available.
-        rules:
-          include:
-            - (tags:"internally displaced persons - idp" AND subnational:1)
-            - (tags:idp AND subnational:1)
-            - (tags:idps AND subnational:1)
-            - (tags:"internally displaced" AND subnational:1)
-            - (tags:"internally displaced people" AND subnational:1)
-            - (tags:"internally displaced persons" AND subnational:1)
-          exclude:
-            - (id:51e83597-474d-40d7-bdd6-15ea4c9986b9) #old version of the DTM data from 2017
-            - (id:96fea290-f0be-4241-8f10-858ff159e85f) #an aggregated version of another DTM dataset that is already included.  This one would be duplicative.
-        metadata_overrides:
-          - dataset_name: yemen-assessment-data-dtm
-            display_state: incomplete
-            comments: Dataset is disaggregated using administrative divisions, but the p-codes do not conform to the standard.  Dataset is disaggregated using specific locations, but no corresponding dataset defining those locations is available.
-#REFUGEES POCs
-      - name: refugees_poc
-        title: Refugees and Persons of Concern
-        description: Tabular data of the number of refugees and persons of concern either in the country or originating from the country disaggregated by their current location. Locations can be administrative divisions or other locations (such as camps) if an additional dataset defining those locations is also available or if the locations' coordinates are defined in the tabular data.
-        rules:
-          include:
-            - (tags:"refugees" AND subnational:1)
-            - (tags:"refugee" AND subnational:1)
-            - (tags:"persons of concern" AND subnational:1)
-            - (tags:"poc" AND subnational:1)
-          exclude:
-#RETURNEES
-      - name: returnees
-        title: Returnees
-        description: Tabular data of the number of displaced people who have returned. 
-        rules:
-          include:
-            - (tags:"returnees" AND subnational:1)
-            - (tags:"returned refugees" AND subnational:1)
-          exclude:
-        metadata_overrides:
-          - dataset_name: yemen-assessment-data-dtm
-            display_state: incomplete
-            comments: Dataset is disaggregated using administrative divisions, but the p-codes do not conform to the standard.  Dataset is disaggregated using specific locations, but no corresponding dataset defining those locations is available.
-#HUM PROFILE LOCATIONS
-      - name: humanitarian_profile_locations
-        title: Humanitarian Profile Locations
-        description: Vector or tabular data with coordinates representing the locations at which displaced people are gathered.
-        rules: 
-          include:
-            - (tags:"affected persons location" AND subnational:1)
-            - (tags:"affected persons locations" AND subnational:1)
-            - (tags:"camps" AND subnational:1)
-          exclulde:
-  - name: humanitarian_coordination
-    title: Humanitarian Coordination
-    description: Core data relating to the coordination of humanitarian activities in a country or crisis.
-    data_series:
-#WHO WHAT WHERE
-      - name: 3w
-        title: 3w - Who is doing what where
-        description: List of organizations working on humanitarian issues, by humanitarian cluster/sector and disaggregated by administrative division.
-        rules:
-          include:
-            - (tags:3w AND subnational:1)
-            - (title:"InterAction member activities in")
-          exclude:
-        metadata_overrides:
-          - dataset_name: ngoaidmap-yem #interaction
-            display_state: incomplete
-            comments: Dataset contains data about some organizations but not all working in the country. Dataset is disaggregated geographically, but inconsistently. 
-#AFFECTED AREAS
-      - name: affected_areas
-        title: Affected Areas
-        description: Vector data or tabular data by administrative division which describe the type and/or severity of impacts geographically.
-        rules:
-          include:
-            - (tags:"affected area" AND subnational:1)
-            - (tags:"affected areas" AND subnational:1)
-          exclude:
-            - (tags:"damage assessment")
-#DAMAGED BUILDINGS
-      - name: damaged_buildings
-        title: Damaged and Destroyed Buildings
-        description: Vector data with locations of damanged/destroyed buildings and an indication of damage level or tabular data indicating percentage or total number of buildings in each damage category by administrative divisions.
-        rules:
-          include:
-            - (tags:"damaged buildings" AND subnational:1)
-            - (tags:"damage assessment" AND subnational:1)
-          exclude:
-#HUMANITARIAN ACCESS
-      - name: humanitarian_access
-        title: Humanitarian Access
-        description: Tabular or vector data describing the location of natural hazards, permissions, active fighting, or other access constraints that impact the delivery of humanitarian interventions.
-        rules:
-          include:
-            - (tags:"humanitarian access" AND subnational:1)
-            - (tags:"obstacles" AND subnational:1)
-          exclude:
-#TRANSPORTATION STATUS
-      - name: transportation_status
-        title: Transportation Status
-        description: Vector or tabular data representing local transportation routes with an indication of status or current practicability.
-        rules:
-          include:
-            - (tags:"obstacles" AND subnational:1)
-            - (tags:"transportation status" AND subnational:1)
-          exclude:
-#CASUALTIES
-      - name: casualties
-        title: Casualties
-        description: Number of deaths and/or persons injured, disaggregated by location.  Values can be cumulative totals or a time series of new deaths and/or injured persons.
-        rules:
-          include:
-            - (tags:casualties AND subnational:1)
-            - (tags:fatalities AND subnational:1)
-            - (tags:deaths AND subnational:1)
-          exclude:
-            - (name:yemen-cholera-outbreak-daily-epidemiology-update) #no longer updated and new cases seems to have slowed, assuming this crisis considered over
-      - name: missing_persons
-        title: Missing Persons
-        description: Current number of people missing, disaggregated by location.
-        rules:
-          include:
-            - (tags:missing persons AND subnational:1)
-          exclude:
+
