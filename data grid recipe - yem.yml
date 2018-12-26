@@ -156,9 +156,11 @@ categories:
         rules:
           include:
             - (tags:"conflicts" AND subnational:1)
-            - (tags:"conflict" AND subnational:1)
             - (tags:"security incidents" AND subnational:1)
           exclude:
+            - (name:yemen-cholera-outbreak-daily-epidemiology-update)
+            - (name:yemen-assessment-data-dtm)
+            - (name:affected-schools-in-yemen)
 
 
 
