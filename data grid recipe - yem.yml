@@ -355,6 +355,6 @@ categories:
             - (tags:"airports" AND subnational:1)
           exclude:
         metadata_overrides:
-          - dataset_name: 5215eb04-a8f5-4eda-9b12-787edc96f35e #ourairports
+          - dataset_name: ourairports-yem
             display_state: incomplete
             comments: Ourairports data relies on user contributions and may not be comprehensive.
