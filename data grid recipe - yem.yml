@@ -209,6 +209,15 @@ categories:
             - (tags:"severe acute malnutrition" AND subnational:1)
             - (tags:sam AND subnational:1)
           exclude:
+#FOOD PRICES
+      - name: food_prices
+        title: Food Prices
+        description: Timeseries prices for common food commodoties at a set of locations
+        rules:
+          include:
+            - (tags:"food prices" AND subnational:1)
+            - (name:"wfp-food-prices")
+          exclude:
 
 
 #ADMINISTRATION
