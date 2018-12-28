@@ -22,6 +22,7 @@ categories:
           include:
             - (tags:3w AND subnational:1)
             - (title:"InterAction member activities in")
+            - (name:sudan-who-is-doing-what-where-3w)
           exclude:
         metadata_overrides:
           - dataset_name: ngoaidmap-sdn
@@ -29,7 +30,7 @@ categories:
             comments: Only covers activities by InterAction Members.
           - dataset_name: sudan-who-is-doing-what-where-3w
             display_state: incomplete
-            comments:
+            comments: " "
 #HUMANITARIAN ACCESS
       - name: humanitarian_access
         title: Humanitarian Access
