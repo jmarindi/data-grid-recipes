@@ -153,7 +153,32 @@ categories:
           include:
             - (tags:"damaged buildings" AND subnational:1)
             - (tags:"damage assessment" AND subnational:1)
+            - (name:damage-assessment-oftawaeli-area-in-central-sulawesi-2847)
+            - (name:damage-assessment-of-pantoloan-area-in-central-sulawesi-2846)
+            - (name:damage-assessment-of-taipa-area-in-central-sulawesi-2845)
+            - (name:ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn)
+            - (name:potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837)
+            - (name:damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836)
           exclude:
+        metadata_overrides:
+          - dataset_name: damage-assessment-oftawaeli-area-in-central-sulawesi-2847
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
+          - dataset_name: damage-assessment-of-pantoloan-area-in-central-sulawesi-2846
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
+          - dataset_name: damage-assessment-of-taipa-area-in-central-sulawesi-2845
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
+          - dataset_name: ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
+          - dataset_name: potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
+          - dataset_name: damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836
+            display_state: incomplete
+            comments: Dataset is not considered complete by its contributor.
 #CONFLICT EVENTS
       - name: conflict_events
         title: Conflict Events
