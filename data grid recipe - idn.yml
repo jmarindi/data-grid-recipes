@@ -24,9 +24,9 @@ categories:
             - (title:"InterAction member activities in")
           exclude:
         metadata_overrides:
-          - dataset_name: #ngoaidmap-XXX  replace XXX with country code to include standard Interaction override
-            display_state: #incomplete
-            comments: #Only covers activities by InterAction Members.
+          - dataset_name: ngoaidmap-idn
+            display_state: incomplete
+            comments: Only covers activities by InterAction Members.
 
 #HUMANITARIAN ACCESS
       - name: humanitarian_access
@@ -96,6 +96,8 @@ categories:
             - (tags:fatalities AND subnational:1)
             - (tags:deaths AND subnational:1)
           exclude:
+            - (name:indonesia-natural-disaster-events-1815-2018)  #there is a similar dataset which has casualty and damage figures which is allowed in, but this one appears to just be a listing of events
+            - (name:climate-change-impact-in-indonesia) #outdated and doesn't appear to be updated
  #MISSING PERSONS
       - name: missing_persons
         title: Missing Persons
@@ -119,7 +121,12 @@ categories:
           include:
             - (tags:"obstacles" AND subnational:1)
             - (tags:"transportation status" AND subnational:1)
+            - (name:indonesia-flight-routes)
           exclude:
+        metadata_overrides:
+          - dataset_name: indonesia-flight-routes
+            display_state: incomplete
+            comments: Dataset contains data about air transportation routes but does not include the expected data about other forms of transport.
 #AFFECTED AREAS
       - name: affected_areas
         title: Affected Areas
