@@ -314,6 +314,9 @@ categories:
           - dataset_name: indonesia-population-by-age-group-sex-and-urban-rural-2010
             display_state: incomplete
             comments: The dataset is not publicly available and must be requested from the contributor.
+          - dataset_name: indonesia-population-projection-by-province-2010-2035
+            display_state: incomplete
+            comments: The dataset is not publicly available and must be requested from the contributor.
 #BASELINE POPULATION SADD
       - name: baseline_population_sadd
         title: Baseline Population by Age and Sex
@@ -336,6 +339,9 @@ categories:
             display_state: incomplete
             comments: Data covers a limited area and is disaggregated by sex but not age.
           - dataset_name: indonesia-population-by-age-group-sex-and-urban-rural-2010
+            display_state: incomplete
+            comments: The dataset is not publicly available and must be requested from the contributor.
+          - dataset_name: indonesia-population-projection-by-province-2010-2035
             display_state: incomplete
             comments: The dataset is not publicly available and must be requested from the contributor.
 #POVERTY RATE
