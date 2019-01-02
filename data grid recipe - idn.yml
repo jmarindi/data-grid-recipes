@@ -325,7 +325,7 @@ categories:
             - (tags:"population" AND tags:"sex and age disaggregated" AND subnational:1)
           exclude:
             - (organization:afdb) #African Development Bank Group datasets are not subnational
-metadata_overrides:
+        metadata_overrides:
           - dataset_name: population-at-village-level-admin4-of-lampung-province
             display_state: incomplete
             comments: Dataset covers a limited area.
