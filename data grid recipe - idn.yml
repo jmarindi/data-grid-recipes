@@ -428,6 +428,6 @@ categories:
             - (tags:"airports" AND subnational:1)
           exclude:
         metadata_overrides:
-          - dataset_name: #ourairports-XXX  replace XXX with country code to include hotosm override
-            display_state: #incomplete
-            comments: #Ourairports data relies on user contributions and may not be comprehensive.
+          - dataset_name: ourairports-idn
+            display_state: incomplete
+            comments: OurAirports data relies on user contributions and may not be comprehensive.
