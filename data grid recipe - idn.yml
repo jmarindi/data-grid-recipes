@@ -419,6 +419,10 @@ categories:
           - dataset_name: hotosm_idn_sigi_roads
             display_state: incomplete
             comments: OpenStreetMap data relies on user contributions and may not be comprehensive. Dataset does not always contain information about practicability of a road.
+          - dataset_name: hotosm_idn_palu_roads
+            display_state: incomplete
+            comments: OpenStreetMap data relies on user contributions and may not be comprehensive. Dataset does not always contain information about practicability of a road.
+
 #AIRPORTS
       - name: airports
         title: Airports
