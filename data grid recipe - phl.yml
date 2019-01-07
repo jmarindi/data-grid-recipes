@@ -309,9 +309,9 @@ categories:
           exclude:
             - (organization:afdb) #African Development Bank Group datasets are not subnational
         metadata_overrides:
-          - dataset_name: 
-            display_state: 
-            comments: 
+          - dataset_name: philippines-small-area-poverty-estimates-2012-2009-2006
+            display_state: incomplete
+            comments: data too old  (from 2006-2012).
 #POVERTY RATE
       - name: poverty_rate
         title: Poverty Rate
