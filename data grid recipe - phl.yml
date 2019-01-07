@@ -26,7 +26,7 @@ categories:
         metadata_overrides:
           - dataset_name: philippines-who-is-doing-what-where-in-marawi-conflict
             display_state: incomplete
-            comments: Dataset covers a limited area..
+            comments: Dataset covers a limited area.
           - dataset_name: who-is-doing-what-where-in-mindanao-philippines-december-2016
             display_state: incomplete
             comments: Old dataset.
@@ -64,6 +64,16 @@ categories:
             - (tags:"internally displaced people" AND subnational:1)
             - (tags:"internally displaced persons" AND subnational:1)
           exclude:
+         metadata_overrides:
+            - dataset_name: philippines-affected-persons-locations-0
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-humanitarian-profile-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
 #REFUGEES POCs
       - name: refugees_poc
         title: Refugees and Persons of Concern
