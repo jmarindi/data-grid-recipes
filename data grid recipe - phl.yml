@@ -85,6 +85,16 @@ categories:
             - (tags:"persons of concern" AND subnational:1)
             - (tags:"poc" AND subnational:1)
           exclude:
+         metadata_overrides:
+            - dataset_name: philippines-affected-persons-locations-0
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-humanitarian-profile-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
 #RETURNEES
       - name: returnees
         title: Returnees
@@ -104,6 +114,16 @@ categories:
             - (tags:"affected persons locations" AND subnational:1)
             - (tags:"camps" AND subnational:1)
           exclulde:
+        metadata_overrides:
+            - dataset_name: philippines-affected-persons-locations-0
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
+            - dataset_name: philippines-humanitarian-profile-affected-persons-locations
+              display_state: incomplete
+              comments: Dataset too old from 2013.
 #CASUALTIES
       - name: casualties
         title: Casualties
