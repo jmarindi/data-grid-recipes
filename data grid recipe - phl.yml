@@ -25,9 +25,11 @@ categories:
           exclude:
         metadata_overrides:
           - dataset_name: philippines-who-is-doing-what-where-in-marawi-conflict
-            display_state: Incomplete as Dataset covers a limited area.
-            comments: #Only covers activities by InterAction Members.
-
+            display_state:incomplete
+            comments: Dataset covers a limited area..
+          - dataset_name: who-is-doing-what-where-in-mindanao-philippines-december-2016
+            display_state:incomplete.
+            comments: Old dataset.
 #HUMANITARIAN ACCESS
       - name: humanitarian_access
         title: Humanitarian Access
