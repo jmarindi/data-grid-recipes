@@ -30,6 +30,12 @@ categories:
           - dataset_name: who-is-doing-what-where-in-mindanao-philippines-december-2016
             display_state: incomplete
             comments: Old dataset.
+          - dataset_name: philippines-typhoon-haima-lawin-who-is-doing-what-and-where-as-of-4-november-2016
+            display_state: incomplete
+            comments: Old dataset.
+          - dataset_name: 3w-for-typhoon-hagupit-ruby
+            display_state: incomplete
+            comments: Old dataset.
 #HUMANITARIAN ACCESS
       - name: humanitarian_access
         title: Humanitarian Access
