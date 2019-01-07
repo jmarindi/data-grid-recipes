@@ -24,9 +24,9 @@ categories:
             - (title:"InterAction member activities in")
           exclude:
         metadata_overrides:
-          - dataset_name: #ngoaidmap-XXX  replace XXX with country code to include standard Interaction override
-            display_state: #incomplete
-            comments: #Only covers activities by InterAction Members.
+          - dataset_name: philippines-who-is-doing-what-where-in-marawi-conflict
+            display_state: incomplete
+            comments: Dataset does not appear to cover all admin X units and is therefore assumed to be incomplete.
 
 #HUMANITARIAN ACCESS
       - name: humanitarian_access
